@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./loginpages.css"; // Using your existing pure CSS file for theme styling
+import "./LoginPages.css";// Using your existing pure CSS file for theme styling
 
 const LoginPage = () => {
   const [formData, setFormData] = useState({ username: "", password: "" });
