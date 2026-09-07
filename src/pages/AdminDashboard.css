@@ -1,0 +1,101 @@
+.admin-wrapper {
+    padding: 20px;
+    width: 100%;
+}
+
+.admin-header {
+    margin-bottom: 40px;
+}
+
+/* Stats Cards */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.stat-card {
+    background: rgba(15, 23, 42, 0.6);
+    padding: 30px;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.stat-icon { font-size: 2.5rem; }
+.stat-icon.cyan { color: #0ea5e9; }
+.stat-icon.green { color: #10b981; }
+.stat-icon.purple { color: #a855f7; }
+
+.stat-info h3 { font-size: 2rem; color: white; }
+.stat-info p { color: #94a3b8; font-weight: 600; }
+
+/* Content Grid */
+.admin-content-grid {
+    display: grid;
+    grid-template-columns: 2fr 1.2fr;
+    gap: 30px;
+}
+
+.admin-glass-card {
+    background: rgba(15, 23, 42, 0.8);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(14, 165, 233, 0.1);
+    border-radius: 28px;
+    padding: 30px;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+/* Table Styling */
+.admin-table .table-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.table-row.head { font-weight: 800; color: #64748b; text-transform: uppercase; font-size: 0.8rem; }
+
+.status-badge { color: #10b981; font-weight: 700; font-size: 0.9rem; }
+
+.action-btns { display: flex; gap: 15px; color: #94a3b8; cursor: pointer; }
+.del-ico:hover { color: #ef4444; }
+.edit-ico:hover { color: #0ea5e9; }
+
+/* Activity Feed */
+.feed-item {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.feed-dot { width: 10px; height: 10px; background: #0ea5e9; border-radius: 50%; box-shadow: 0 0 10px #0ea5e9; }
+.feed-details p { color: #e2e8f0; font-size: 0.95rem; }
+.feed-details span { color: #64748b; font-size: 0.8rem; }
+
+.add-btn {
+    background: #0ea5e9;
+    color: #020617;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 10px;
+    font-weight: 800;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+@media (max-width: 1024px) {
+    .admin-content-grid { grid-template-columns: 1fr; }
+}

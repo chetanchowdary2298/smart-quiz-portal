@@ -1,0 +1,59 @@
+.dashboard-home-wrapper {
+    width: 100%;
+    height: 100%;
+    /* Image is now handled in JSX, but we keep these for perfect fit */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    /* Perfect Centering Logic */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertical Center */
+    align-items: center;     /* Horizontal Center */
+    text-align: center;
+}
+
+.dashboard-home-content {
+    z-index: 2;
+}
+
+.welcome-title {
+    color: #00c9ff;
+    font-size: 4.5rem;
+    font-weight: 800;
+    margin: 0;
+ margin-bottom: 50px;
+}
+
+.motivation-text {
+    color: #fff9ff;
+    font-size: 1.5rem;
+    font-style: italic;
+    margin: 10px 0 20px 0;
+}
+
+.status-text {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+/* Button with no surrounding box */
+.take-quiz-main-btn {
+    background: linear-gradient(135deg, #00c9ff 0%, #92fe9d 100%);
+    color: #0d1b2a;
+    border: none;
+    padding: 16px 50px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 0 0 20px rgba(0, 201, 255, 0.4);
+}
+
+.take-quiz-main-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 30px rgba(0, 201, 255, 0.6);
+}

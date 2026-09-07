@@ -1,0 +1,59 @@
+.test-page-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    overflow-y: auto;
+}
+
+.test-main-title {
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    text-shadow: 0 0 10px rgba(0, 201, 255, 0.5);
+}
+
+.language-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    width: 100%;
+    max-width: 1100px;
+}
+
+.lang-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.lang-card:hover {
+    transform: translateY(-5px);
+    border-color: #00c9ff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.lang-name {
+    color: #00c9ff;
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+}
+
+.start-quiz-btn {
+    width: 100%;
+    background: linear-gradient(135deg, #00c9ff 0%, #92fe9d 100%);
+    color: #0d1b2a;
+    border: none;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}

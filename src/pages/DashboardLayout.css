@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.dashboard-container {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #000; /* Ensures no white gaps */
+}
+
+.sidebar {
+    width: 240px;
+    background-color: #0d1b2a;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 20px;
+    z-index: 100;
+    flex-shrink: 0; /* Prevents sidebar from shrinking */
+}
+
+.sidebar-header h2 {
+    font-size: 1.8rem;
+    color: #00c9ff;
+    margin-bottom: 40px;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.nav-item {
+    padding: 12px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #a0aec0;
+    transition: 0.3s;
+}
+
+.nav-item:hover {
+    background-color: #1b2e42;
+    color: white;
+}
+
+.nav-item.active {
+    background-color: #00c9ff;
+    color: #0d1b2a;
+    font-weight: bold;
+}
+
+.main-content-wrapper {
+    flex: 1; /* Fills the gap beside the sidebar */
+    position: relative;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.top-right-icons {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    display: flex;
+    gap: 25px;
+    z-index: 1000;
+}
+
+.icon {
+    font-size: 1.6rem;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.8);
+    transition: 0.3s;
+}
+
+.icon:hover {
+    color: #00c9ff;
+    transform: scale(1.1);
+}
+
+.main-content {
+    flex: 1; /* Takes up all remaining height under the icons */
+    width: 100%;
+    height: 100%;
+    display: flex; /* Vital for centering child elements */
+    flex-direction: column;
+}

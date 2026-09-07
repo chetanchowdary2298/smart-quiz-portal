@@ -1,0 +1,113 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f5f5f5;
+}
+
+.app {
+  text-align: center;
+  padding-top: 100px;
+}
+.quiz-card {
+  background: white;
+  border-radius: 10px;
+  padding: 25px;
+  max-width: 600px;
+  margin: auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.option-btn {
+  display: block;
+  width: 100%;
+  margin: 8px 0;
+  padding: 10px;
+  background: #eee;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.option-btn.selected {
+  background-color: #a2d5f2;
+}
+.back-arrow {
+  font-size: 24px;
+  background: none;
+  border: none;
+  margin-bottom: 10px;
+}
+.quiz-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.result-card {
+  text-align: center;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 500px;
+  margin: auto;
+}
+
+.save-btn {
+  padding: 10px 20px;
+  background-color: #00cc66;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.exit-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+.modal-box {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  animation: popup 0.3s ease-in-out;
+}
+.modal-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 15px;
+}
+.yes-btn {
+  background-color: green;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+}
+.no-btn {
+  background-color: red;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+}
+@keyframes popup {
+  from {
+    transform: scale(0.6);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

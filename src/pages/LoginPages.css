@@ -1,0 +1,74 @@
+.auth-container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0d1b2a;
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+}
+
+.auth-box {
+    background-color: #1b2e42;
+    padding: 40px;
+    border-radius: 15px;
+    width: 380px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    text-align: center;
+}
+
+.auth-title {
+    color: #00c9ff;
+    font-size: 2.2rem;
+    margin-bottom: 25px;
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.auth-input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    background-color: #e8f0fe;
+    font-size: 1rem;
+    box-sizing: border-box; /* This keeps inputs from stretching out of the box */
+}
+
+.auth-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #00c9ff;
+    border: none;
+    border-radius: 8px;
+    color: #0d1b2a;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.auth-link {
+    margin-top: 15px;
+    color: #a0aec0;
+    cursor: pointer;
+    font-size: 0.9rem;
+    display: block;
+}
+
+.auth-footer {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    color: #a0aec0;
+}
+
+.signup-toggle {
+    color: #00c9ff;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 5px;
+}
