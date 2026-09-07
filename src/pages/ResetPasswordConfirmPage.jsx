@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom"; // 🎯 Switched useParams to useLocation
-import "./loginpages.css"; 
+import "./LoginPages.css";
 
 const ResetPasswordConfirmPage = () => {
     const navigate = useNavigate();
