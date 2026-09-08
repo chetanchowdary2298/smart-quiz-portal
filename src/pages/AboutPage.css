@@ -2,25 +2,37 @@
     min-height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* Allows scrolling if content is long */
+    align-items: flex-start;
     padding: 40px 20px;
-    background: #020617; /* Matches dashboard theme */
+    background: #020617;
     position: relative;
     overflow-x: hidden;
 }
 
 /* Aura Background Consistency */
-.about-wrapper::before, .about-wrapper::after {
+.about-wrapper::before,
+.about-wrapper::after {
     content: "";
     position: absolute;
-    width: 600px; height: 600px;
+    width: 600px;
+    height: 600px;
     border-radius: 50%;
     filter: blur(120px);
     opacity: 0.15;
     z-index: 0;
 }
-.about-wrapper::before { background: #0ea5e9; top: -100px; left: -100px; }
-.about-wrapper::after { background: #10b981; bottom: 100px; right: -100px; }
+
+.about-wrapper::before {
+    background: #0ea5e9;
+    top: -100px;
+    left: -100px;
+}
+
+.about-wrapper::after {
+    background: #10b981;
+    bottom: 100px;
+    right: -100px;
+}
 
 .about-glass-card {
     position: relative;
@@ -30,14 +42,14 @@
     border: 1px solid rgba(14, 165, 233, 0.2);
     border-radius: 28px;
     width: 100%;
-    max-width: 900px;
-    padding: 60px 40px;
+    max-width: 1000px;
+    padding: 50px 35px;
     box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6);
 }
 
 .about-hero {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
 .about-hero .motivation-text {
@@ -48,56 +60,111 @@
 .about-divider {
     border: 0;
     height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(14, 165, 233, 0.3), transparent);
-    margin: 40px 0;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(14, 165, 233, 0.3),
+        transparent
+    );
+    margin: 30px 0;
 }
 
 .founder-section {
     text-align: center;
 }
 
-.founder-card {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-    margin-top: 30px;
-    background: rgba(255, 255, 255, 0.03);
-    padding: 30px;
-    border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.05);
+.founder-section .feedback-status {
+    margin-bottom: 25px;
 }
 
-.founder-image-container {
-    width: 150px;
-    height: 150px;
-    border: 3px solid #0ea5e9; /* Professional Cyan Glow */
+/* Team Grid */
+.team-container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+/* Individual Team Card */
+.team-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+    margin-top: 0;
+    padding: 22px 16px;
+    min-height: 300px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: transform 0.3s ease, border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(14, 165, 233, 0.35);
+    box-shadow: 0 10px 25px rgba(14, 165, 233, 0.12);
+}
+
+/* Circular Team Photos */
+.team-card .founder-image-container {
+    width: 105px;
+    height: 105px;
+    border: 3px solid #0ea5e9;
     border-radius: 50%;
-    overflow: hidden; /* Ensures the image stays circular */
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-shrink: 0;
-    box-shadow: 0 0 20px rgba(14, 165, 233, 0.3);
+    box-shadow: 0 0 18px rgba(14, 165, 233, 0.25);
 }
 
 .founder-photo {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Prevents the image from stretching */
+    object-fit: cover;
 }
 
-.founder-info {
-    text-align: left;
+.team-card .founder-info {
+    width: 100%;
+    text-align: center;
 }
 
+.team-card .score-text {
+    margin: 3px 0 8px;
+    font-size: 1rem;
+}
+
+.team-designation {
+    margin: 0 0 10px;
+    color: #0ea5e9;
+    font-size: 0.82rem;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.team-description {
+    font-size: 0.78rem;
+    line-height: 1.5;
+    margin: 0 auto;
+    max-width: 240px;
+}
+
+/* Social Links */
 .social-links {
     display: flex;
-    gap: 20px;
-    margin-top: 20px;
+    justify-content: center;
+    gap: 18px;
+    margin-top: 15px;
 }
 
 .social-icon {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     color: #94a3b8;
     transition: 0.3s;
     cursor: pointer;
@@ -108,15 +175,36 @@
     transform: translateY(-3px);
 }
 
-@media (max-width: 768px) {
-    .founder-card {
-        flex-direction: column;
-        text-align: center;
+/* Tablet */
+@media (max-width: 850px) {
+    .team-container {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 650px;
     }
-    .founder-info {
-        text-align: center;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .about-wrapper {
+        padding: 25px 12px;
     }
-    .social-links {
-        justify-content: center;
+
+    .about-glass-card {
+        padding: 35px 18px;
+        border-radius: 22px;
+    }
+
+    .team-container {
+        grid-template-columns: 1fr;
+        max-width: 330px;
+    }
+
+    .team-card {
+        min-height: auto;
+    }
+
+    .team-card .founder-image-container {
+        width: 110px;
+        height: 110px;
     }
 }
