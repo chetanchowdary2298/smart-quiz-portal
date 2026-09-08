@@ -46,13 +46,26 @@ const QuizPage = () => {
       try {
         setLoading(true);
 
+        // Convert the frontend display name to the exact
+        // subject name stored in the Railway MySQL database.
+        //
+        // Frontend: C
+        // Database: C Programming
+        const apiLanguage =
+          language === "C" ? "C Programming" : language;
+
         // Build dynamic query params tracking selected subject parameters
         const queryParams = new URLSearchParams({
-          language: language,
+          language: apiLanguage,
           topic: topic,
           difficulty: difficulty || "Easy",
           limit: numQuestions || 10,
         });
+
+        console.log(
+          "Quiz API Request:",
+          `${API_URL}/api/accounts/questions/?${queryParams.toString()}`
+        );
 
         // Connect to Django API
         const response = await fetch(
